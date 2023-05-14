@@ -1,0 +1,33 @@
+/* Change the background color of the entire page to light gray */
+body {
+    background-color: lightgray;
+  }
+  
+  /* Add a border around the header and set its background color to white */
+  header {
+    border: 1px solid black;
+    background-color: white;
+  }
+  
+  /* Change the font color and size of the main heading */
+  h1 {
+    color: navy;
+    font-size: 2.5em;
+  }
+  
+  /* Add padding to the main section and center its contents */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Add a border and margin to the footer */
+  footer {
+    border-top: 1px solid black;
+    margin-top: 50px;
+  }
+  
+  /* Change the font color of the footer text */
+  footer p {
+    color: gray;
+  }
