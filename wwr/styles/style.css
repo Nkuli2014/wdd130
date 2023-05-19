@@ -1,12 +1,22 @@
+/* Centered elements */
+nav a,
+h1,
+h2,
+h4,
+.button-box,
+.msg {
+  text-align: center;
+}
+
 /* Change the background color of the entire page to light gray */
 body {
-    background-color: lightgray;
+    background-color: #fcfbfb;
   }
   
   /* Add a border around the header and set its background color to white */
   header {
     border: 1px solid black;
-    background-color: white;
+    background-color: rgba(20, 30, 13, 0.7);
   }
   
   /* Change the font color and size of the main heading */
@@ -31,3 +41,77 @@ body {
   footer p {
     color: gray;
   }
+
+  /* Add a background color to the section with class "msg" */
+.msg {
+  background-color: darkgrey;
+  padding: 20px;
+}
+
+/* Add a background color to the footer */
+footer {
+  background-color: darkgrey;
+  padding: 20px;
+}
+
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+#background {
+  height: 725px;
+}
+
+.logo,
+.icon {
+  width: 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: black;
+  color: #d9c2a3;
+}
+
+.icon {
+  width: 80px;
+}
+
+nav a {
+  text-align: center;
+  color: #fcfbfb;
+  text-decoration: none;
+}
+
+footer p {
+  font-size: 1.2em;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+.camping-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero-img {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
