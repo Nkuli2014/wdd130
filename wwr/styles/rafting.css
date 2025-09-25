@@ -1,0 +1,118 @@
+/* ========================
+   Rafting Site Stylesheet
+   ======================== */
+
+/* Color Scheme Variables */
+:root {
+  --primary-color: #004080;     /* Deep blue */
+  --accent1-color: #333333;     /* Dark gray for text */
+  --accent2-color: #f0f0f0;     /* Light gray background */
+  --heading-font: 'Roboto', sans-serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Reset all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body text */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--accent2-color);
+}
+
+/* Limit page width */
+header, main, footer {
+  width: 840px;
+  margin: 0;   /* remove auto centering */
+}
+
+
+
+/* Headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Base spacing */
+nav, p, section, article {
+  margin: 16px 0;   /* top/bottom spacing only */
+  padding: 8px 0;   /* remove left/right padding */
+}
+
+
+
+/* Navigation Menu */
+.menu-links span {
+  color: var(--accent1-color);
+  cursor: default; /* not clickable */
+}
+
+.menu-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer; /* clickable */
+}
+
+.menu-links a:hover {
+  text-decoration: underline;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;  /* forces vertical stacking */
+  gap: 8px;                /* spacing between items */
+}
+
+
+/* Social media links (remove underline) */
+.socialmedia a {
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  position: relative; /* allows absolute positioning for children */
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Hero heading overlay */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff; /* white text */
+}
+
+/* Hero article overlay */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Article image inside hero */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 12px;
+  border-radius: 6px;
+}
