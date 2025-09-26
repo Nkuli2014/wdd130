@@ -1,37 +1,30 @@
-/* ========================
-   Rafting Site Stylesheet
-   ======================== */
-
-/* Color Scheme Variables */
+/* CSS Variables */
 :root {
-  --primary-color: #004080;     /* Deep blue */
-  --accent1-color: #333333;     /* Dark gray for text */
-  --accent2-color: #f0f0f0;     /* Light gray background */
-  --heading-font: 'Roboto', sans-serif;
   --body-font: Arial, Helvetica, sans-serif;
+  --heading-font: Georgia, "Times New Roman", serif;
+  --primary-color: #0b3d91;
+  --accent1-color: #ff7a00;
 }
 
-/* Reset all elements */
+/* Universal Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body text */
+/* Body Styles */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
-  background-color: var(--accent2-color);
+  background: #fff;
 }
 
-/* Limit page width */
+/* Limit page width and center */
 header, main, footer {
   width: 840px;
-  margin: 0;   /* remove auto centering */
+  margin: 0 auto;
 }
-
-
 
 /* Headings */
 h1, h2 {
@@ -39,80 +32,121 @@ h1, h2 {
   color: var(--primary-color);
 }
 
-/* Base spacing */
+/* Consistent spacing */
 nav, p, section, article {
-  margin: 16px 0;   /* top/bottom spacing only */
-  padding: 8px 0;   /* remove left/right padding */
+  margin: 16px;
+  padding: 8px;
 }
 
-
-
-/* Navigation Menu */
-.menu-links span {
-  color: var(--accent1-color);
-  cursor: default; /* not clickable */
+/* Logo */
+.logo {
+  height: 64px;
+  margin: 16px 0 0 16px;
 }
 
-.menu-links a {
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 16px;
+}
+
+.main-nav a {
   color: var(--primary-color);
   text-decoration: none;
-  cursor: pointer; /* clickable */
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s;
 }
 
-.menu-links a:hover {
-  text-decoration: underline;
+.main-nav a:hover {
+  color: var(--accent1-color);
 }
 
-.menu-links {
-  display: flex;
-  flex-direction: column;  /* forces vertical stacking */
-  gap: 8px;                /* spacing between items */
-}
-
-
-/* Social media links (remove underline) */
-.socialmedia a {
-  text-decoration: none;
-}
-
-/* Hero section */
+/* Hero Section */
 .hero {
-  position: relative; /* allows absolute positioning for children */
+  position: relative;
+  margin-bottom: 24px;
 }
 
-.hero img {
+.hero-img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
-/* Hero heading overlay */
+/* Hero Heading Overlay */
 .hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.85;
   background-color: var(--accent1-color);
-  color: #fff; /* white text */
+  color: #fff;
+  font-size: 2em;
+  border-radius: 4px;
+  left: 0;
 }
 
-/* Hero article overlay */
+/* Hero Article Overlay */
 .hero article {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 12px;
-  border-radius: 8px;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: rgba(255,255,255,0.95);
+  padding: 16px 16px 16px 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
 }
 
-/* Article image inside hero */
-.hero article img {
+/* Client Image */
+.hero article img,
+.client-img {
   float: right;
   width: 125px;
-  margin-left: 12px;
-  border-radius: 6px;
+  height: auto;
+  margin-left: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
+
+/* Footer */
+footer {
+  margin-top: 32px;
+  padding-bottom: 24px;
+  font-size: 1em;
+  color: var(--primary-color);
+  border-top: 2px solid var(--accent1-color);
+}
+
+/* Social Media Nav */
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.socialmedia img:hover {
+  transform: scale(1.1);
+}
+
