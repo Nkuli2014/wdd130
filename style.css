@@ -1,93 +1,89 @@
-/* General body styling */
+/* Basic page styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f8ff; /* light blue */
-  color: #333;
-  margin: 20px;
-  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header styling */
+/* Center and limit main content width */
+main {
+  max-width: 840px;
+  margin: 32px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* Header navigation styling */
 header {
-  background-color: #2e8b57;
-  padding: 10px 0;
+  background: #e3f2fd;
+  padding: 16px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
 nav a {
-  color: white;
+  color: #0b3d91;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
+  font-size: 1.1em;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background: #bbdefb;
+  color: #ff7a00;
 }
 
-/* Main section styling */
-main {
-  max-width: 800px; /* limit width per assignment */
-  margin: 20px auto;
-  padding: 10px;
-}
-
-/* Headline */
-h1 {
-  color: #2e8b57;
+/* Profile image styling */
+main img {
+  display: block;
+  margin: 0 auto 16px auto;
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 /* Paragraph styling */
 p {
-  font-size: 18px;
+  padding: 0;
+  font-size: 1.1em;
   line-height: 1.6;
-  max-width: 700px;
-  margin: 10px auto;
-  padding: 0; /* assignment requirement */
-}
-
-/* Container for main images */
-.image-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-/* Main images */
-main img {
-  width: 150px;
-  height: auto; /* maintain aspect ratio */
-  border: 4px solid #2e8b57;
-  border-radius: 10px;
-}
-
-/* Aside section styling */
-aside {
-  width: 300px;
-  margin: 20px auto;
-  border: 1px solid #333;
-  padding: 15px;
-  background-color: #f0f0f0;
-  color: #222;
-}
-
-/* Aside image */
-aside img {
-  width: 200px;
-  height: auto; /* maintain aspect ratio */
-  border: 4px solid #2e8b57;
-  border-radius: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 /* Footer styling */
 footer {
-  margin-top: 20px; /* top margin to separate from main content */
-  border-top: 2px solid #333; /* top border for distinction */
+  margin-top: 32px;
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
   text-align: center;
-  padding: 10px;
-  font-weight: bold;
+  color: #234;
+  background: #f5f5f5;
+  font-size: 1em;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  main {
+    width: 95%;
+    padding: 12px;
+  }
+  nav {
+    gap: 12px;
+  }
+  main img {
+    width: 120px;
+  }
 }
 
