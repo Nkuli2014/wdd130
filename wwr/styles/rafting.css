@@ -38,20 +38,25 @@ nav, p, section, article {
   padding: 8px;
 }
 
+/* Header Layout with Grid */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 16px 0;
+}
+
 /* Logo */
 .logo {
   height: 64px;
-  margin: 16px 0 0 16px;
+  margin-right: 24px;
 }
 
-/* Main Navigation */
+/* Main Navigation with Flexbox */
 .main-nav {
   display: flex;
   gap: 24px;
-  align-items: center;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 16px;
+  justify-content: flex-end;
 }
 
 .main-nav a {
@@ -59,10 +64,13 @@ nav, p, section, article {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
-  transition: color 0.2s;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
 }
 
 .main-nav a:hover {
+  background: #bbdefb;
   color: var(--accent1-color);
 }
 
@@ -101,7 +109,7 @@ nav, p, section, article {
   left: 24px;
   right: 24px;
   background: rgba(255,255,255,0.95);
-  padding: 16px 16px 16px 16px;
+  padding: 16px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: flex;
@@ -119,21 +127,109 @@ nav, p, section, article {
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
-/* Footer */
-footer {
-  margin-top: 32px;
-  padding-bottom: 24px;
+/* History Section Layout */
+.history-section {
+  margin: 32px 0;
+}
+
+.history-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: left;
+}
+
+.history-left, .history-right {
+  flex: 1 1 0;
+}
+
+.history-center {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.history-img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+/* Adventures Section Layout */
+.adventures-section {
+  margin: 32px 0;
+}
+
+.adventure-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;      /* Center the row */
+  flex-wrap: nowrap;            /* Prevent wrapping to next line */
+  overflow-x: auto;             /* Allow horizontal scroll if needed */
+}
+
+.adventure-list figure {
+  width: 150px;
+  margin: 0;
+  text-align: center;
+  flex: 0 0 150px;              /* Prevent shrinking/growing */
+}
+
+.adventure-list img {
+  width: 100%;
+   height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.adventure-list figcaption {
+  margin-top: 8px;
   font-size: 1em;
   color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  header, main, footer {
+    width: 95%;
+  }
+  .history-content, .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .adventure-list {
+    flex-wrap: nowrap;          /* Keep figures in one row, allow scroll */
+    gap: 12px;
+    overflow-x: auto;
+  }
+}
+
+/* Footer Layout */
+footer {
+  margin-top: 32px;
   border-top: 2px solid var(--accent1-color);
+  padding-top: 16px;
+  background: #f5f5f5;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+  color: #234;
 }
 
 /* Social Media Nav */
 .socialmedia {
   display: flex;
-  justify-content: center;
   gap: 12px;
-  margin-top: 8px;
 }
 
 .socialmedia a {
@@ -150,3 +246,18 @@ footer {
   transform: scale(1.1);
 }
 
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  header, main, footer {
+    width: 95%;
+  }
+  .history-content, .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .adventure-list {
+    flex-wrap: nowrap;          /* Keep figures in one row, allow scroll */
+    gap: 12px;
+    overflow-x: auto;
+  }
+}
