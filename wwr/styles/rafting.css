@@ -35,12 +35,10 @@ h1, h2 {
 
 /* Header Grid Layout */
 header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding: 1rem;
-  background-color: var(--header-bg);
+  position: relative;
+  z-index: 20;
 }
+
 
 .logo {
   max-width: 100px;
@@ -69,39 +67,47 @@ header {
   color: var(--accent1-color);
 }
 
-/* Hero Section */
+/* Hero container */
+/* Hero container */
 .hero {
   position: relative;
   margin-bottom: 24px;
 }
 
+/* Hero image */
 .hero-img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 6px;
+  object-fit: cover; /* maintains aspect ratio */
+  image-rendering: auto; /* smooth scaling */
 }
 
+/* Hero heading */
 .hero h1 {
   position: absolute;
   top: 20px;
+  left: 0;
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.85;
-  background-color: var(--accent1-color);
-  color: #fff;
   font-size: 2em;
+  background-color: rgba(255, 255, 255, 0.85); /* soft white instead of bright orange */
+  color: #0b3d91; /* primary blue text for contrast */
   border-radius: 4px;
-  left: 0;
+  z-index: 10; /* sits above article */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* improves readability */
 }
 
+/* Hero article overlay */
 .hero article {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Align content to the right */
+  justify-content: flex-end;
   gap: 16px;
-  background: rgba(255,255,255,0.95);
+  background-color: rgba(255, 255, 255, 0.85); /* subtle overlay instead of orange */
+  color: #222; 
   padding: 16px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -109,17 +115,22 @@ header {
   bottom: 24px;
   left: 24px;
   right: 24px;
+  z-index: 5; /* behind h1 */
 }
 
+/* Client image inside article */
 .hero article img,
 .client-img {
-  order: 2; /* Place image after text */
+  order: 2; /* image comes after text */
   width: 125px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   margin-left: 16px;
 }
+
+
+
 /* History Section Layout */
 .history-section {
   margin: 32px 0;
