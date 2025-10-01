@@ -97,28 +97,29 @@ header {
 }
 
 .hero article {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align content to the right */
+  gap: 16px;
   background: rgba(255,255,255,0.95);
   padding: 16px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
 }
 
 .hero article img,
 .client-img {
-  float: right;
+  order: 2; /* Place image after text */
   width: 125px;
   height: auto;
-  margin-left: 16px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-left: 16px;
 }
-
 /* History Section Layout */
 .history-section {
   margin: 32px 0;
