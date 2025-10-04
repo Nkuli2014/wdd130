@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Exciting Expeditions — address, phone, email, map, employee profiles, and a contact form for reservations, questions, and website suggestions.">
+  <meta name="author" content="Nonkululeko Sibongumusa Shezi" />
+  <title>Contact Us | Exciting Expeditions</title>
+  <link rel="stylesheet" href="styles/rafting.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Exciting Expeditions Logo" class="logo">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- CONTACT PAGE -->
+    <section class="contact-page">
+
+      <!-- Company info -->
+      <div class="company-info" aria-labelledby="contact-heading">
+        <h1 id="contact-heading">Contact Us — Exciting Expeditions</h1>
+        <address class="company-address">
+          223 Emathangini Ward 32<br>
+          Osizweni, Kwa-Zulu Natal
+        </address>
+        <p class="company-phone">Phone: <a href="tel:+27761359342">+27 76 135 9342</a></p>
+        <p class="company-email">Email: <a href="mailto:info@whitewater.com">info@whitewater.com</a></p>
+      </div>
+
+      <!-- Two column area: map + form -->
+      <section class="contact-columns" aria-label="Contact columns: map and contact form">
+
+        <!-- Map -->
+        <div class="map" aria-label="Map showing our location">
+          <!-- NOTE: removed any inline style="border:0" per assignment instructions -->
+          <iframe class="map-iframe"
+            src="https://www.google.com/maps?q=223+Emathangini+Ward+32+Osizweni+Kwa-Zulu+Natal&output=embed"
+            width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing Exciting Expeditions location"></iframe>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" action="#" method="post" novalidate aria-labelledby="form-heading">
+            <h2 id="form-heading" class="sr-only">Contact form</h2>
+
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+            <fieldset class="purpose-fieldset">
+              <legend>Message Purpose</legend>
+              <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
+              <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+              <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
+            </fieldset>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+
+            <label class="subscribe">
+              <input id="subscribe" name="subscribe" type="checkbox">
+              Please subscribe me to the monthly newsletter
+            </label>
+
+            <button type="submit" class="btn-submit">Get in Touch!</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Employee profiles -->
+      <section class="employee-profiles" aria-labelledby="profiles-heading">
+        <h2 id="profiles-heading">We Are Here to Serve You</h2>
+        <div class="profiles-grid">
+          <figure class="employee-card">
+            <img src="images/employee-zama.jpg" alt="Zama Gumbi, Lead guide">
+            <figcaption><strong>Zama Gumbi</strong><br>Lead Guide</figcaption>
+          </figure>
+
+          <figure class="employee-card">
+            <img src="images/employee-siyamthanda.jpg" alt="Siyamthanda Dlamini, Reservations Manager">
+            <figcaption><strong>Siyamthanda Dlamini</strong><br>Reservations Manager</figcaption>
+          </figure>
+
+          <figure class="employee-card">
+            <img src="images/employee-fisokuhle.jpg" alt="Fisokuhle Zikode, Operations Supervisor">
+            <figcaption><strong>Fisokuhle Zikode</strong><br>Operations Supervisor</figcaption>
+          </figure>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Exciting Expeditions | Nonkululeko Sibongumusa Shezi</p>
+      <nav class="socialmedia">
+        <a href="https://facebook.com" target="_blank" rel="noopener">
+          <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">
+          <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

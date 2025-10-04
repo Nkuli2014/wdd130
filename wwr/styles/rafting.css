@@ -247,3 +247,145 @@ footer p {
     gap: 16px;
   }
 }
+
+/* ---------- Contact page styles (append to rafting.css) ---------- */
+
+.contact-page {
+  margin: 2rem auto;
+  max-width: 840px; /* matches existing layout */
+  padding-bottom: 2rem;
+}
+
+.company-info {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.company-info h1 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.company-address, .company-phone, .company-email {
+  margin: 0.15rem 0;
+  font-size: 0.98rem;
+  color: #333;
+}
+
+/* Contact columns: map + form */
+.contact-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+/* Map iframe */
+.map-iframe {
+  width: 100%;
+  height: 320px;
+  border: none; /* no inline style border=0 — handled in CSS */
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: block;
+}
+
+/* Contact form */
+.contact-form-wrapper {
+  align-self: start;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: none;
+}
+
+.contact-form textarea { resize: vertical; min-height: 120px; }
+
+.purpose-fieldset {
+  margin: 0.6rem 0;
+  border: none;
+  padding: 0;
+}
+.purpose-fieldset label { display: block; font-weight: normal; margin: 0.25rem 0; }
+
+/* Subscribe row */
+.subscribe {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.6rem 0;
+  font-weight: 500;
+}
+
+/* Submit button */
+.btn-submit {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #777;
+  background: #eee;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* Employee profiles */
+.employee-profiles { margin-top: 2rem; border-top: 2px solid var(--accent1-color); padding-top: 1rem; }
+.employee-profiles h2 { text-align: center; margin-bottom: 0.75rem; }
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: start;
+  justify-items: center;
+}
+
+.employee-card {
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+}
+.employee-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.employee-card figcaption { margin-top: 0.5rem; color: var(--primary-color); }
+
+/* Accessibility: focus states */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form button:focus,
+.contact-form a:focus {
+  outline: 3px solid rgba(11,61,145,0.15);
+  outline-offset: 2px;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 720px) {
+  .contact-columns {
+    grid-template-columns: 1fr;
+  }
+  .profiles-grid {
+    grid-template-columns: 1fr;
+  }
+  .map-iframe { height: 260px; }
+}
