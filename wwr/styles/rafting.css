@@ -1,4 +1,6 @@
-/* CSS Variables */
+/* =========================
+   VARIABLES
+========================= */
 :root {
   --body-font: Arial, Helvetica, sans-serif;
   --heading-font: Georgia, "Times New Roman", serif;
@@ -7,38 +9,44 @@
   --header-bg: #c9b6f0;
 }
 
-/* Universal Reset */
+/* =========================
+   UNIVERSAL RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
   font-family: var(--body-font);
   color: #222;
   background: #fff;
 }
 
-/* Limit page width and center */
+/* =========================
+   LAYOUT CONTAINERS
+========================= */
 header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 
-/* Headings */
-h1, h2 {
+/* =========================
+   HEADINGS
+========================= */
+h1, h2, h3 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-/* Header Grid Layout */
+/* =========================
+   HEADER
+========================= */
 header {
   position: relative;
   z-index: 20;
 }
-
 
 .logo {
   max-width: 100px;
@@ -67,37 +75,40 @@ header {
   color: var(--accent1-color);
 }
 
-/* Hero container */
-/* Hero container */
-.hero {
+/* =========================
+   HERO SECTIONS
+========================= */
+.hero, .home-hero {
   position: relative;
   margin-bottom: 24px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-/* Hero image */
-.hero-img {
+.hero-img, .home-hero img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 6px;
-  object-fit: cover; /* maintains aspect ratio */
-  image-rendering: auto; /* smooth scaling */
+  object-fit: cover;
 }
 
-/* Hero heading */
-.hero h1 {
+.hero h1, .home-hero h1 {
   position: absolute;
   top: 20px;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 90%;
   padding: 16px;
   text-align: center;
   font-size: 2em;
-  background-color: rgba(255, 255, 255, 0.85); /* soft white instead of bright orange */
-  color: #0b3d91; /* primary blue text for contrast */
+  background-color: rgba(255,255,255,0.85);
+  color: var(--primary-color);
   border-radius: 4px;
-  z-index: 10; /* sits above article */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* improves readability */
+  z-index: 10;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  word-wrap: break-word;
 }
 
 /* Hero article overlay */
@@ -106,7 +117,7 @@ header {
   align-items: center;
   justify-content: flex-end;
   gap: 16px;
-  background-color: rgba(255, 255, 255, 0.85); /* subtle overlay instead of orange */
+  background-color: rgba(255, 255, 255, 0.85);
   color: #222; 
   padding: 16px;
   border-radius: 6px;
@@ -115,13 +126,12 @@ header {
   bottom: 24px;
   left: 24px;
   right: 24px;
-  z-index: 5; /* behind h1 */
+  z-index: 5;
 }
 
-/* Client image inside article */
 .hero article img,
 .client-img {
-  order: 2; /* image comes after text */
+  order: 2;
   width: 125px;
   height: auto;
   border-radius: 8px;
@@ -129,9 +139,9 @@ header {
   margin-left: 16px;
 }
 
-
-
-/* History Section Layout */
+/* =========================
+   HISTORY SECTION
+========================= */
 .history-section {
   margin: 32px 0;
 }
@@ -160,7 +170,9 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
-/* Adventures Section Layout */
+/* =========================
+   ADVENTURES SECTION
+========================= */
 .adventures-section {
   margin: 32px 0;
 }
@@ -193,7 +205,9 @@ header {
   color: var(--primary-color);
 }
 
-/* Footer Flex Layout */
+/* =========================
+   FOOTER
+========================= */
 footer {
   margin-top: 32px;
   border-top: 2px solid var(--accent1-color);
@@ -232,27 +246,12 @@ footer p {
   transform: scale(1.1);
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  header, main, footer {
-    width: 95%;
-  }
-  .history-content, .footer-content {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .adventure-list {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-}
-
-/* ---------- Contact page styles (append to rafting.css) ---------- */
-
+/* =========================
+   CONTACT PAGE
+========================= */
 .contact-page {
   margin: 2rem auto;
-  max-width: 840px; /* matches existing layout */
+  max-width: 840px;
   padding-bottom: 2rem;
 }
 
@@ -273,7 +272,6 @@ footer p {
   color: #333;
 }
 
-/* Contact columns: map + form */
 .contact-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -282,17 +280,15 @@ footer p {
   margin-top: 1rem;
 }
 
-/* Map iframe */
 .map-iframe {
   width: 100%;
   height: 320px;
-  border: none; /* no inline style border=0 — handled in CSS */
+  border: none;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: block;
 }
 
-/* Contact form */
 .contact-form-wrapper {
   align-self: start;
 }
@@ -311,19 +307,25 @@ footer p {
   border: 1px solid #bdbdbd;
   border-radius: 6px;
   font-size: 1rem;
-  box-shadow: none;
 }
 
-.contact-form textarea { resize: vertical; min-height: 120px; }
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
 
 .purpose-fieldset {
   margin: 0.6rem 0;
   border: none;
   padding: 0;
 }
-.purpose-fieldset label { display: block; font-weight: normal; margin: 0.25rem 0; }
 
-/* Subscribe row */
+.purpose-fieldset label {
+  display: block;
+  font-weight: normal;
+  margin: 0.25rem 0;
+}
+
 .subscribe {
   display: flex;
   align-items: center;
@@ -332,7 +334,6 @@ footer p {
   font-weight: 500;
 }
 
-/* Submit button */
 .btn-submit {
   display: inline-block;
   padding: 0.55rem 1rem;
@@ -344,9 +345,16 @@ footer p {
   margin-top: 0.5rem;
 }
 
-/* Employee profiles */
-.employee-profiles { margin-top: 2rem; border-top: 2px solid var(--accent1-color); padding-top: 1rem; }
-.employee-profiles h2 { text-align: center; margin-bottom: 0.75rem; }
+.employee-profiles {
+  margin-top: 2rem;
+  border-top: 2px solid var(--accent1-color);
+  padding-top: 1rem;
+}
+
+.employee-profiles h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
 
 .profiles-grid {
   display: grid;
@@ -361,6 +369,7 @@ footer p {
   max-width: 220px;
   text-align: center;
 }
+
 .employee-card img {
   width: 100%;
   height: 160px;
@@ -368,9 +377,12 @@ footer p {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-.employee-card figcaption { margin-top: 0.5rem; color: var(--primary-color); }
 
-/* Accessibility: focus states */
+.employee-card figcaption {
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form button:focus,
@@ -379,7 +391,188 @@ footer p {
   outline-offset: 2px;
 }
 
-/* Responsive: stack on small screens */
+/* =========================
+   HOME PAGE SPECIFIC
+========================= */
+.home-hero {
+  max-height: 500px;
+}
+
+.newsletter {
+  background: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter label {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+  flex: 1 1 200px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #bdbdbd;
+}
+
+.newsletter button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: var(--accent1-color);
+  color: #222;
+}
+
+.home-cta a {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent1-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.home-cta a:hover {
+  background: var(--primary-color);
+}
+
+/* Home content grid */
+.home-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.home-content img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.home-content h3 {
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.home-content p {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   TRIPS PAGE SPECIFIC
+========================= */
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.trip-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.trip-card h3 {
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+.trip-card p {
+  padding: 0 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.trip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.trips-cta a {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent1-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.trips-cta a:hover {
+  background: var(--primary-color);
+}
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+@media (max-width: 900px) {
+  header, main, footer {
+    width: 95%;
+  }
+  .history-content, .footer-content {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .adventure-list {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .home-hero {
+    max-height: 350px;
+  }
+  .home-hero h1 {
+    font-size: 1.6em;
+    padding: 0.75rem 1rem;
+  }
+  .newsletter input[type="text"],
+  .newsletter input[type="email"] {
+    flex: 1 1 100%;
+    margin: 0 0 0.5rem 0;
+  }
+  .trips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 720px) {
   .contact-columns {
     grid-template-columns: 1fr;
@@ -387,5 +580,15 @@ footer p {
   .profiles-grid {
     grid-template-columns: 1fr;
   }
-  .map-iframe { height: 260px; }
+  .map-iframe {
+    height: 260px;
+  }
 }
+
+@media (max-width: 600px) {
+  .home-hero h1 {
+    font-size: 1.3em;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
