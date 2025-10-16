@@ -1,0 +1,41 @@
+/* Limit main width and center content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Paragraph padding reset */
+p {
+  padding: 0;
+}
+
+/* Style the aside element */
+aside {
+  width: 250px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid #333;
+  background-color: #f2f2f2;
+  color: #000;
+  text-align: center;
+}
+
+/* Aside image styling */
+aside img {
+  width: 200px;
+  height: auto; /* maintain aspect ratio */
+}
+
+/* Make existing main images exclusive */
+main img {
+  width: 150px;
+  height: auto;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 20px;
+  border-top: 2px solid #333;
+  text-align: center;
+  padding-top: 10px;
+}
