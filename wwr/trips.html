@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Discover our rafting trips at Exciting Expeditions — from beginner-friendly rivers to advanced whitewater adventures!" />
-  <title>Exciting Expeditions | Our Rafting Trips</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Discover our rafting trips — beginner to expert adventures, trip lengths, and pricing." />
+  <meta name="author" content="Nonkululeko Sibongumusa Shezi" />
+  <title>Trips | Exciting Expeditions</title>
   <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">
-        <img src="images/logo.png" alt="Exciting Expeditions Logo" />
-      </a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <a href="index.html" class="brand" aria-label="Exciting Expeditions home">
+      <img src="images/logo.png" alt="Exciting Expeditions logo" class="logo">
+    </a>
+
+    <nav class="main-nav" role="navigation" aria-label="Main">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="trips.html">Trips</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="trips.html" class="current">Trips</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="main" class="site-container" role="main">
+    <section class="hero-small" aria-hidden="true">
       <h1>Find Your Perfect Rafting Adventure</h1>
     </section>
 
-    <section class="trips-section">
-      <article class="trip-card">
-        <img src="images/trip-beginner.jpg" alt="Beginner rafting trip" />
-        <h3>Calm River Drift</h3>
-        <p>Perfect for families and first-timers. Gentle rapids and scenic routes that let you enjoy the beauty of nature safely and comfortably.</p>
-      </article>
+    <section class="trips-section" aria-labelledby="trips-heading">
+      <h2 id="trips-heading" class="sr-only">Trips list</h2>
 
-      <article class="trip-card">
-        <img src="images/trip-intermediate.jpg" alt="Intermediate rafting trip" />
-        <h3>Adventure Rapids</h3>
-        <p>A thrilling balance of excitement and safety. Ideal for those looking to push their limits without going too extreme.</p>
-      </article>
+      <div class="trips-grid">
+        <article class="trip-card">
+          <img src="images/trip-beginner-large.jpg" alt="Calm River Drift" />
+          <h3>Calm River Drift</h3>
+          <p>Perfect for families and first-timers. Gentle rapids and scenic routes — ideal for photos and relaxation.</p>
+          <a class="trip-more" href="contact.html">Reserve</a>
+        </article>
 
-      <article class="trip-card">
-        <img src="images/trip-expert.jpg" alt="Expert rafting trip" />
-        <h3>Extreme Expedition</h3>
-        <p>For seasoned rafters! Conquer intense rapids and test your endurance on one of the most exciting river routes in South Africa.</p>
-      </article>
-    </section>
+        <article class="trip-card">
+          <img src="images/trip-intermediate-large.jpg" alt="Adventure Rapids" />
+          <h3>Adventure Rapids</h3>
+          <p>A thrilling balance of excitement and safety. Ideal for those who want more challenge without full extremes.</p>
+          <a class="trip-more" href="contact.html">Reserve</a>
+        </article>
 
-    <section>
-      <h2 style="text-align:center; margin-top:2rem;">Trip Summary</h2>
-      <table class="trip-table">
+        <article class="trip-card">
+          <img src="images/trip-expert-large.jpg" alt="Extreme Expedition" />
+          <h3>Extreme Expedition</h3>
+          <p>For seasoned rafters: conquer intense rapids and test your endurance on a full-day expedition.</p>
+          <a class="trip-more" href="contact.html">Reserve</a>
+        </article>
+      </div>
+
+      <h2 class="table-heading">Trip Summary</h2>
+      <table class="trip-table" summary="Summary of the trips, difficulty, duration, and price per person">
         <thead>
           <tr>
-            <th>Trip Name</th>
-            <th>Difficulty</th>
-            <th>Duration</th>
-            <th>Price (per person)</th>
+            <th scope="col">Trip Name</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Price (per person)</th>
           </tr>
         </thead>
         <tbody>
@@ -79,17 +88,19 @@
           </tr>
         </tbody>
       </table>
-    </section>
 
-    <section class="cta">
-      <h2>Book Your Adventure Today!</h2>
-      <p>Ready to take on the rapids? Contact us to reserve your spot now!</p>
-      <a href="contact.html">Contact Us</a>
+      <div class="trips-cta">
+        <h2>Book Your Adventure Today!</h2>
+        <p>Ready to take on the rapids? Contact us to reserve your spot now.</p>
+        <a class="btn-cta" href="contact.html">Contact Us</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Exciting Expeditions | Designed by Nkuli Shezi</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 Exciting Expeditions | Designed by Nonkululeko Sibongumusa Shezi</p>
+    </div>
   </footer>
 </body>
 </html>

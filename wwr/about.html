@@ -1,99 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Exciting Expeditions - Whitewater rafting adventures that bring thrill, fun, and unforgettable memories.">
-  <meta name="author" content="Nonkululeko Sibongumusa Shezi">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Exciting Expeditions — our story, values, and experienced rafting guides." />
+  <meta name="author" content="Nonkululeko Sibongumusa Shezi" />
   <title>About Us | Exciting Expeditions</title>
-  <link rel="stylesheet" href="styles/rafting.css">
+  <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="Exciting Expeditions Logo" class="logo">
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <a href="index.html" class="brand" aria-label="Exciting Expeditions home">
+      <img src="images/logo.png" alt="Exciting Expeditions logo" class="logo">
+    </a>
+
+    <nav class="main-nav" role="navigation" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="current">About</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-   <div class="hero">
-  <img src="images/rapids.jpg" alt="People enjoying white water rafting" class="hero-img">
-  <h1>About Us — Exciting Expeditions</h1>
-  <article>
-    <img src="images/happy-client-rafting.jpg" alt="Happy client rafting" class="client-img">
-    <p>
-      Here at Exciting Expeditions, our whitewater rafting trips are designed to provide thrill-seekers with an unforgettable experience on the water. 
-      Our expert guides ensure safety while you navigate through stunning landscapes and challenging rapids. Gear up for adventure! Have fun!
-    </p>
-  </article>
-</div>
+  <main id="main" class="site-container" role="main">
+    <section class="about-hero">
+      <img src="images/rapids-large.jpg" alt="Exciting Expeditions team on a raft" class="about-hero-img">
+      <h1>About Exciting Expeditions</h1>
+    </section>
 
-
-
-    <section class="history-section">
-      <h2>History</h2>
+    <section class="history-section" aria-labelledby="history-heading">
+      <h2 id="history-heading">History</h2>
       <div class="history-content">
         <div class="history-left">
-          <p>
-            Exciting Expeditions was founded with the goal of bringing the excitement of rafting to everyone. 
-            From humble beginnings with just a few rafts, we have grown into a trusted company known for memorable trips, safety, and adventure.
-          </p>
+          <p>Exciting Expeditions was founded to bring quality rafting experiences to families, schools, and adventurers. Starting with a few rafts, we now run dozens of safe and exciting trips each month.</p>
         </div>
+
         <div class="history-center">
-          <img src="images/history.jpg" alt="Rafting history photo" class="history-img">
+          <img src="images/history-large.jpg" alt="Historic rafting photo" class="history-img">
         </div>
+
         <div class="history-right">
-          <p>
-            Over the years, our team has explored rivers across the globe, building a reputation for excellence and fun. Join us and become part of our story!
-          </p>
+          <p>Our guides are trained and certified in river safety and first aid. We continuously review safety procedures and keep our equipment well-maintained to ensure safe, memorable trips.</p>
         </div>
       </div>
-    </section>  
+    </section>
 
-    <section class="adventures-section">
-      <h2>Adventure Awaits You</h2>
+    <section class="adventures-section" aria-labelledby="adventures-heading">
+      <h2 id="adventures-heading">Adventure Awaits You</h2>
       <div class="adventure-list">
         <figure>
-          <img src="images/adventure1.jpg" alt="Los Dientes del Diablo">
+          <img src="images/adventure1-large.jpg" alt="Los Dientes del Diablo" />
           <figcaption>Los Dientes del Diablo</figcaption>
         </figure>
+
         <figure>
-          <img src="images/adventure2.jpg" alt="Big Mallard">
+          <img src="images/adventure2-large.jpg" alt="Big Mallard" />
           <figcaption>Big Mallard</figcaption>
         </figure>
+
         <figure>
-          <img src="images/adventure3.jpg" alt="Half Day Adventure">
+          <img src="images/adventure3-large.jpg" alt="Half Day Adventure" />
           <figcaption>Half Day Adventure</figcaption>
         </figure>
+
         <figure>
-          <img src="images/adventure4.jpg" alt="Sunset Rapids">
+          <img src="images/adventure4-large.jpg" alt="Sunset Rapids" />
           <figcaption>Sunset Rapids</figcaption>
         </figure>
+
         <figure>
-          <img src="images/adventure5.jpg" alt="Family Float">
+          <img src="images/adventure5-large.jpg" alt="Family Float" />
           <figcaption>Family Float</figcaption>
         </figure>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-content">
+  <footer class="site-footer">
+    <div class="footer-inner">
       <p>&copy; 2025 Exciting Expeditions | Nonkululeko Sibongumusa Shezi</p>
-      <nav class="socialmedia">
-        <a href="https://facebook.com" target="_blank" rel="noopener">
-          <img src="images/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener">
-          <img src="images/twitter.png" alt="Twitter">
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener">
-          <img src="images/instagram.png" alt="Instagram">
-        </a>
+      <nav class="social" aria-label="Social links">
+        <a href="https://facebook.com" target="_blank" rel="noopener"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener"><img src="images/instagram.png" alt="Instagram"></a>
       </nav>
     </div>
   </footer>
